@@ -103,8 +103,8 @@ Authorization: is giving permission and take back the given permissin.
   4) The data entered in the table can be validated in 2 steps:
      a) By assigning Datatype (mandatory).
      b) By assigning contraints (optional). 
-     ![](.\img\1.jpg)
-     ![](.\img\2.jpg)
+     ![](/img/1.jpg)
+     ![](/img/2.jpg)
 ---
 ## ***03/02/2023***
 
@@ -130,7 +130,7 @@ Authorization: is giving permission and take back the given permissin.
   - it uses fixed length memory allocation. 
   - we  have to define the length first.
   - it can lead to memory wastage.
-  ![](.\img\3.jpg)
+  ![](/img/3.jpg)
 
 #### 2)Varchar: 
    - It will accept 'A'to 'Z', 'a't 'z', 0 to 0, '!@#$%^&', '!@#abc'.
@@ -231,6 +231,6 @@ Authorization: is giving permission and take back the given permissin.
   - foregin key is also called as 'Referential integrity constraint'.
 -Foreign key is not a combination of Unique and Not Null.
 ```
-![](.\img\4.jpg)
+![](/img/4.jpg)
 
 ---
