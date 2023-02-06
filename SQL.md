@@ -103,8 +103,8 @@ Authorization: is giving permission and take back the given permissin.
   4) The data entered in the table can be validated in 2 steps:
      a) By assigning Datatype (mandatory).
      b) By assigning contraints (optional). 
-     ![](1.jpg)
-     ![](2.jpg)
+     ![](./img/1.jpg)
+     ![](./img/2.jpg)
 ---
 ## ***03/02/2023***
 
@@ -130,7 +130,7 @@ Authorization: is giving permission and take back the given permissin.
   - it uses fixed length memory allocation. 
   - we  have to define the length first.
   - it can lead to memory wastage.
-  ![](3.jpg)
+  ![](./img/3.jpg)
 
 #### 2)Varchar: 
    - It will accept 'A'to 'Z', 'a't 'z', 0 to 0, '!@#$%^&', '!@#abc'.
@@ -172,7 +172,7 @@ Authorization: is giving permission and take back the given permissin.
      - scale ranges from -84 to 127
 
 ## 04/02/2023
-#### 5) Large Object:-
+#### `5) Large Object:-`
   a) Character large object:    
     - It is used to store the Binary value of image, mp4, mp3, document .....upto 4GB size.   
     - Syntax: ```CLOB```
@@ -183,7 +183,7 @@ Authorization: is giving permission and take back the given permissin.
 
 ---
 
-## Constraints
+## `Constraints`
   - Constraints are the extra validation given for a particular column.
  ### Types:
   1) Unique constraint
@@ -192,10 +192,10 @@ Authorization: is giving permission and take back the given permissin.
   4) Primary key
   5) Foreign key
 
-### 1) Unique constraint:
+### `1) Unique constraint:`
   - Unique is a constraint in which it will not accept repeated and duplicate values.
 
-### 2) Not Null constraint:
+### `2) Not Null constraint:`
   - Not Null is a constraint in which it will not accept null values. 
     #### Notes:-
     - Null means empty or nothing.
@@ -207,21 +207,21 @@ Authorization: is giving permission and take back the given permissin.
       - 1 * Null = Null
       - 1 / Null = Null
 
-### 3) Check constraint:
+### `3) Check constraint:`
   - Check is the constraint in which it will be given as extra validation depending upon the condition, if the condition is true it will accept the values else it will reject.
 
   - eg.:-
     - 1) check (SAL > 0)
     - 2) check (LENGTH(PH_No) = 10)
   
-### Primary Key:-
+### `4) Primary Key:-`
   - Primary key is a constraint which  is used to identify the record uniquely from the table characteristics of primary key.
   - Primary key will not accept duplicate and repeated values.
   - Primary key will not accept Null values.
   - Primary key is a combination of unique and Not Null.
   - Primary key is not mandatory but recommended to have one in an table.
   
-### Foreign Key:-
+### `5) Foreign Key:-`
 ```diff
 +Foreign key is used to create connection between multiple table characteristics of foreign key.
 +Foreign key will accept repreated and duplicate values.
@@ -231,6 +231,103 @@ Authorization: is giving permission and take back the given permissin.
   - foregin key is also called as 'Referential integrity constraint'.
 -Foreign key is not a combination of Unique and Not Null.
 ```
-![](4.jpg)
+![](./img/4.jpg)
 
 ---
+
+## 06/02/2023
+# `Overveiw of SQL:-`
+
+###  1) Data Definition Language(DDL)
+    - Create 
+    - Rename
+    - Alter
+    - Truncate
+    - Drop
+###  2) Data Manipulation Language(DML)
+    - Insert
+    - Update
+    - Delete
+###  3) Transaction Controlled Langugage
+    - Commit 
+    - Rollback
+    - Savepoint
+###  4) Data Controlled Language
+    - Grant 
+    - Revoke
+###  5) Data Querry Langugage
+    - Select
+  
+  * Projection
+  * Selection
+  * Joins
+---
+#### `Important questions`
+```diff
+-
+-  1. what is data?
+-  2. what is database?
+-  3. what are CRUD and operations? give an example.
+-  4. what is DBMS and RDBMS and tell the difference.
+-  5. Tell the alternative name for Rows, Coumns.
+-  6. Definition for Rows, Cell and Table
+-  7. who invented Relational Model.
+-  8. Rules of E.F. Codd
+-  9. Explain Datatypes and tell the Difference between Var and Varchar.
+-  10. Explain constraints and tell the difference between Primary key and Foregin key
+-  11. Another name for foregin key.
+-
+---
+```
+
+## Data Query language (DQL):-
+  - It i a language in which we can get/fetch the data from already created table.  
+  - types of statements: 
+  
+  ###  Projection
+    - projection is used to fetch the data by selecting only columns.
+    - Syntax
+      ```
+        SELECT*/[DISTINCT],COL_NAME,EXPRESSION/[ALIAS]FROM TABLE_NAME;
+      ```
+        - arguments written in [] square braces are optional
+        - there are 5 arguments in above example. 
+        - 3 are mandatory and 2 are not mandatory. 
+####  ORDER OF EXECUTION:
+    1) FROM CLAUSE
+    2) SELECT CLAUSE
+      - we have to specify SELECT clause first then FROM clasuse. 
+      - but form clause will be excecuted first.
+  #### working proceduure of projection img:
+  ![](./img/5.jpg)
+
+  ### working procedure of projection:
+    - first FROM clause will starts the executionand search for the given table.
+    - if the table is present in the database it will be kept under execution.
+    - if the table is not present in  the database, it will be throwing you an eror message.
+    - after the execution of FROM clause, SELECT clause will starts the execution and gives you the output.
+
+
+### SELECT clasuse :-
+  - the job of select clasuse is to display the result and it is also responsible ffor the result table.
+### Semicolon(;) :-
+  - it is used to end the statement or Query.
+### Seperator(,) :-
+  - it is used to wrtite the Multiple column names or Multiple argumentsub the SELECT clause.
+
+---
+
+## Example:
+#### Question. WAQTD (Write a query to display) name and branch of students.
+  -  SELECT SNAME,BRANCH FROM STUDENT;   
+  - **Answer:**  
+
+  ![](./img/6.jpg)   
+---
+
+
+
+
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+Ro helpmate (youtube channel for sql installation issues)

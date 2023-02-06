@@ -234,3 +234,101 @@ Authorization: is giving permission and take back the given permissin.
 ![](/img/4.jpg)
 
 ---
+
+## 06/02/2023
+# `Overveiw of SQL:-`
+
+###  1) Data Definition Language(DDL)
+    - Create 
+    - Rename
+    - Alter
+    - Truncate
+    - Drop
+###  2) Data Manipulation Language(DML)
+    - Insert
+    - Update
+    - Delete
+###  3) Transaction Controlled Langugage
+    - Commit 
+    - Rollback
+    - Savepoint
+###  4) Data Controlled Language
+    - Grant 
+    - Revoke
+###  5) Data Querry Langugage
+    - Select
+  
+  * Projection
+  * Selection
+  * Joins
+---
+#### `Important questions`
+```diff
+-
+-  1. what is data?
+-  2. what is database?
+-  3. what are CRUD and operations? give an example.
+-  4. what is DBMS and RDBMS and tell the difference.
+-  5. Tell the alternative name for Rows, Coumns.
+-  6. Definition for Rows, Cell and Table
+-  7. who invented Relational Model.
+-  8. Rules of E.F. Codd
+-  9. Explain Datatypes and tell the Difference between Var and Varchar.
+-  10. Explain constraints and tell the difference between Primary key and Foregin key
+-  11. Another name for foregin key.
+-
+---
+```
+
+## Data Query language (DQL):-
+  - It i a language in which we can get/fetch the data from already created table.  
+  - types of statements: 
+  
+  ###  Projection
+    - projection is used to fetch the data by selecting only columns.
+    - Syntax
+      ```
+        SELECT*/[DISTINCT],COL_NAME,EXPRESSION/[ALIAS]FROM TABLE_NAME;
+      ```
+        - arguments written in [] square braces are optional
+        - there are 5 arguments in above example. 
+        - 3 are mandatory and 2 are not mandatory. 
+####  ORDER OF EXECUTION:
+    1) FROM CLAUSE
+    2) SELECT CLAUSE
+      - we have to specify SELECT clause first then FROM clasuse. 
+      - but form clause will be excecuted first.
+  #### working proceduure of projection img:
+  ![](./img/5.jpg)
+
+  ### working procedure of projection:
+    - first FROM clause will starts the executionand search for the given table.
+    - if the table is present in the database it will be kept under execution.
+    - if the table is not present in  the database, it will be throwing you an eror message.
+    - after the execution of FROM clause, SELECT clause will starts the execution and gives you the output.
+
+
+### SELECT clasuse :-
+  - the job of select clasuse is to display the result and it is also responsible ffor the result table.
+### Semicolon(;) :-
+  - it is used to end the statement or Query.
+### Seperator(,) :-
+  - it is used to wrtite the Multiple column names or Multiple argumentsub the SELECT clause.
+
+---
+
+## Example:
+#### Question. WAQTD (Write a query to display) name and branch of students.
+  -  SELECT SNAME,BRANCH FROM STUDENT;   
+  - **Answer:**  
+
+  ![](./img/6.jpg)   
+  
+---
+
+
+
+
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+Ro helpmate (youtube channel for sql installation issues)
