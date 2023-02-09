@@ -57,8 +57,10 @@ On database we can perform CRUD operations:
   * Here we are using Querry Langugage (QL) to interact with (DBMS).
   * Security and Authorization are the important features of DBMS.
 
-### Security: No third party can acces it. 
-### Authorization: is giving permission and take back the given permission.   
+### Security: 
+    No third party can acces it. 
+### Authorization: 
+    is giving permission and take back the given permission.   
 
 ### RDBMS (Relational DBMS).
   RDBMS is a software which is used to maintain and manage the database.
@@ -87,18 +89,18 @@ On database we can perform CRUD operations:
 
 ### Relational Model
   - The data scientist called E.F.Codd invented ralational model.
-  - Any DBMS software which follows relational model in it is called becomes RDBMS.
+  - Any DBMS software which follows relational model in it becomes RDBMS.
   - In relational model we will store everything in the form of table.
-  - DBMS + RN = RDBMS
+  - DBMS + RM = RDBMS
 
 #### Rules of E.F.Codd 
-  1) The data entered in the cell should be a single values data (atomic data).
+  1) The data entered in the cell should be a single valued data (atomic data).
   2) In RDBMS we can store everthing in the form of tables including metadata.    
-    metadata =>  the data about the data is called as metadata and it is stored in metadata.    
+    metadata =>  the data about the data is called as metadata and it is stored in metadata table.    
     for example:  time, size, date, format of image present in table.    
     this metadata is stored in metatable.
     metadata is created by software.
-  3) In RDBNS we can store the data in multiple tables if we want we can create the connection between the tables by using 
+  3) In RDBMS we can store the data in multiple tables if we want we can create the connection between the tables by using 
      the "Key Attributers"
   4) The data entered in the table can be validated in 2 steps:      
     1)  By assigning Datatype (mandatory).    
@@ -239,11 +241,13 @@ On database we can perform CRUD operations:
 # `Overveiw of SQL:-`
 
 ###  1) Data Definition Language(DDL)
+  ```sql
     - Create 
     - Rename
     - Alter
     - Truncate
     - Drop
+  ```
 ###  2) Data Manipulation Language(DML)
     - Insert
     - Update
@@ -285,14 +289,14 @@ On database we can perform CRUD operations:
   - types of statements: 
   
   ###  Projection
-    - projection is used to fetch the data by selecting only columns.
-    - Syntax
-      ```
-        SELECT*/[DISTINCT],COL_NAME,EXPRESSION/[ALIAS]FROM TABLE_NAME;
-      ```
-        - arguments written in [] square braces are optional
-        - there are 5 arguments in above example. 
-        - 3 are mandatory and 2 are not mandatory. 
+  - projection is used to fetch the data by selecting only columns.
+  - Syntax:-      
+    ```sql
+      SELECT*/[DISTINCT],COL_NAME,EXPRESSION/[ALIAS]FROM TABLE_NAME;
+    ```    
+  - arguments written in [] square braces are optional
+  - there are 5 arguments in above example. 
+  - 3 are mandatory and 2 are not mandatory. 
 ####  ORDER OF EXECUTION:
     1) FROM CLAUSE
     2) SELECT CLAUSE
@@ -302,7 +306,7 @@ On database we can perform CRUD operations:
   ![](./img/5.jpg)
 
   ### working procedure of projection:
-    - first FROM clause will starts the executionand search for the given table.
+    - first FROM clause will starts the execution and search for the given table.
     - if the table is present in the database it will be kept under execution.
     - if the table is not present in  the database, it will be throwing you an eror message.
     - after the execution of FROM clause, SELECT clause will starts the execution and gives you the output.
