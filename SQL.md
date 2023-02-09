@@ -40,7 +40,7 @@
   (Entity = living / non-living thing / object)
 
 ### Database
-  Database is a place or medium which is used top store the data in systematic and organised manner.
+  Database is a place or medium which is used to store the data in systematic and organised manner.
 
 On database we can perform CRUD operations: 
   * Create / Insert
@@ -58,9 +58,9 @@ On database we can perform CRUD operations:
   * Security and Authorization are the important features of DBMS.
 
 ### Security: No third party can acces it. 
-Authorization: is giving permission and take back the given permissin.
+### Authorization: is giving permission and take back the given permission.   
 
-### RDBMS (Relational DBMS)
+### RDBMS (Relational DBMS).
   RDBMS is a software which is used to maintain and manage the database.
   * In RDBMS we can store the data in table form.
   * Here we are using structured query language to interact with RDBMS.
@@ -93,23 +93,23 @@ Authorization: is giving permission and take back the given permissin.
 
 #### Rules of E.F.Codd 
   1) The data entered in the cell should be a single values data (atomic data).
-  2) In RDBMS we can store everthing in the form of tables including metadata. 
-    metadata =>  the data about the data is called as metadata and it is stored in metadata. 
-    for example:  time, size, date, format of image present in table. 
-    this metadata is stores in metatable.
+  2) In RDBMS we can store everthing in the form of tables including metadata.    
+    metadata =>  the data about the data is called as metadata and it is stored in metadata.    
+    for example:  time, size, date, format of image present in table.    
+    this metadata is stored in metatable.
     metadata is created by software.
   3) In RDBNS we can store the data in multiple tables if we want we can create the connection between the tables by using 
      the "Key Attributers"
-  4) The data entered in the table can be validated in 2 steps:
-     a) By assigning Datatype (mandatory).
-     b) By assigning contraints (optional). 
+  4) The data entered in the table can be validated in 2 steps:      
+    1)  By assigning Datatype (mandatory).    
+    2)  By assigning contraints (optional). 
      ![](./img/1.jpg)
      ![](./img/2.jpg)
 ---
 ## ***03/02/2023***
 
 ### Data Types
-#### Datatypes are used to find what kind of is present in a particular column.
+#### Datatypes are used to find what kind of data is present in a particular column.
 
 ####  Types:
     1) Char datatype
@@ -133,7 +133,7 @@ Authorization: is giving permission and take back the given permissin.
   ![](./img/3.jpg)
 
 #### 2)Varchar: 
-   - It will accept 'A'to 'Z', 'a't 'z', 0 to 0, '!@#$%^&', '!@#abc'.
+   - It will accept 'A'to 'Z', 'a' to 'z', 0 to 0, '!@#$%^&', '!@#abc'.
    - whenever we use varchar datatype we want to mention some size for it.
    - we can store upto 2000 memory allocation.
    - varchar uses "variable length memory allocation".
@@ -174,7 +174,7 @@ Authorization: is giving permission and take back the given permissin.
 ## 04/02/2023
 #### `5) Large Object:-`
   a) Character large object:    
-    - It is used to store the Binary value of image, mp4, mp3, document .....upto 4GB size.   
+    - It is used to store characters upto 4GB of size.   
     - Syntax: ```CLOB```
   
   b) Binary large object :    
@@ -323,10 +323,114 @@ Authorization: is giving permission and take back the given permissin.
   - **Answer:**  
 
   ![](./img/6.jpg)   
+  
 ---
 
+## ***03/02/2023***
+
+### Distinct Clause :-  
+  - Distinct clause is used to remove the duplicate values in the result.
+  - Distinct clause has to be passed as the first argument in the select clasuse.
+  - In distinct clasuse we can pass multiple column_names and it will remove the combination of columns which are repeated.
+
+  ####  Note:-
+    - Distinct clause will remove all the duplicate records only if all the column values are same.
+
+  ##### `example 1:-`    
+  ![](./img/7.jpg)
+  ![](./img/8.jpg)
+
+  ##### `example 2:-`     
+
+  ![](./img/9.jpg)
+  ##### `example 3:-`
+  ![](./img/10.jpg)
 
 
+##  ***COMMANDS***
+
+1.  
+  ```sql
+    SELECT * FROM TAB;
+  ```
+    - This command is used to get all the table names from the database.    
+  ![](./img/11.jpg)
+
+2)  
+  ```sql
+      SET LINES 1000 PAGES 100;
+  ```
+    - it is used to ellaborate the page length and lines of the software.   
+
+3)  Slash   
+
+  ```sql
+      /
+  ```
+    - it is used to get the previous output.
+  ![](./img/12.jpg)      
+  
+4)  EDIT (ED)
+  ```sql
+      EDIT;
+      OR 
+      ED;
+  ```
+    - it is used to modify or alter the query in notepad page, you  should not enter (;) semicolon in notepad page.    
+  ![](./img/13.jpg)
+5)  Clear Screen  
+  ```sql
+      CL SCR;
+  ```
+    - it is used to clear the whole screen.
+6)  QUIT / EXIT  
+  ```sql
+      QUIT;
+      or
+      EXIT;
+  ```
+    - to close the software.
+7)  ASTERISK (*)
+    - it is used to fetch all the columns & records inside the table.
+    or
+    - it is used to fetcth the entire table.
+
+## `Questions`   
+1.  WAQTD name and designation of employees.
+
+  ```sql
+      SELECT ENAME,JOB FROM EMP;
+  ```
+2. WAQTD  EMPNO, SALARY & COMMISSION of employees.
+  ```sql
+    SELECT EMPNO,SAL,COMM FROM EMP;
+  ```
+3. WAQTD details of employees.
+  ```sql
+    SELECT *
+    FROM EMP;
+  ```
+2. WAQTD  location in department table.
+  ```sql
+    SELECT LOC FROM DEPT;
+  ```
+2. WAQTD  MGR& JOINING DATE of employees.
+  ```sql
+    SELECT MGR,HIREDATE FROM EMP;
+  ```
+2. WAQTD all the details of the employees along with salary.
+  - Here before & after the Asterisk (*), you should not pass any arguments... for using other arguments we have syntax:   
+    ```Table_name.*```   
+  ```sql
+    SELECT EMP.*,SAL
+      FROM EMP;
+  ```
+2. WAQTD  EMPNO, SALARY & COMMISSION of employees.
+  ```sql
+    SELECT EMPNO,SAL,COMM FROM EMP;
+  ```
+
+---
 
 
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
