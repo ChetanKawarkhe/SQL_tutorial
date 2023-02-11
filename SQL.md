@@ -84,7 +84,7 @@ On database we can perform CRUD operations:
   => The intersection of rows & columns is called as cell.
 
   * Table
-  => The organisation of rows and coolumns is called as table.
+  => The organisation of rows and columns is called as table.
   -----------------------------------------------------------------
 
 ### Relational Model
@@ -395,9 +395,9 @@ On database we can perform CRUD operations:
   ```
     - to close the software.
 7)  ASTERISK (*)
-    - it is used to fetch all the columns & records inside the table.
+  - it is used to fetch all the columns & records inside the table.
     or
-    - it is used to fetcth the entire table.
+  - it is used to fetcth the entire table.
 
 ## `Questions`   
 1.  WAQTD name and designation of employees.
@@ -414,27 +414,81 @@ On database we can perform CRUD operations:
     SELECT *
     FROM EMP;
   ```
-2. WAQTD  location in department table.
+4. WAQTD  location in department table.
   ```sql
     SELECT LOC FROM DEPT;
   ```
-2. WAQTD  MGR& JOINING DATE of employees.
+5. WAQTD  MGR& JOINING DATE of employees.
   ```sql
     SELECT MGR,HIREDATE FROM EMP;
   ```
-2. WAQTD all the details of the employees along with salary.
+6. WAQTD all the details of the employees along with salary.
   - Here before & after the Asterisk (*), you should not pass any arguments... for using other arguments we have syntax:   
     ```Table_name.*```   
   ```sql
     SELECT EMP.*,SAL
       FROM EMP;
   ```
-2. WAQTD  EMPNO, SALARY & COMMISSION of employees.
-  ```sql
-    SELECT EMPNO,SAL,COMM FROM EMP;
-  ```
+---
+
+##  Expressions
+  - expression is a combination of Operands and Operator.
+or 
+  - expression is a statement whcih gives you the result.<br/><br/>   
+![](./img/14.jpg)
 
 ---
+
+### Questions
+1.  WAQTD name, salary and also annual salary of employees.
+```sql
+  SELECT ENAME, SAL, SAL*12 FROM EMP;
+```  
+2.  WAQTD name, salary, salary with the hike of 10%.
+```sql
+  SELECT ENAME, SAL, SAL+SAL*10/100 FROM EMP;
+```
+3.  WAQTD name, salary, salary with the deduction of 10%
+```sql
+  SELECT ENAME, SAL, SAL-SAL*10/100 FROM EMP;
+```
+4.  WAQTD all the details of the employees with 15% hike in salary.
+```sql
+  SELECT EMP.*, SAL+SAL*10/100 FROM EMP;
+``` 
+5.  WAWTD all the details of employees with the deduction of 15% in salary.
+```sql
+  SELECT EMP.*, SAL-SAL*15/100 FROM EMP;  
+```
+6.  WAQTD all the names, salary of employees with the hike of 10% in annual salary.
+```sql
+  SELECT ENAME, SAL, SAL*12+SAL*12*10/100 FROM EMP;
+```
+7.  WAQTD all the names, salary of employees along with the deduction of 10% in annual salary.
+```sql
+  SELECT ENAME, SAL, SAL*12-SAL*12/100 FROM EMP;
+```
+8.  WAQTD names, salary and also half term salary.
+
+```sql
+  SELECT ENAME, SAL, SAL*6, FROM EMP;
+```  
+9.  WAQTD names, salary and also per day salary of eomployees.
+```sql
+  SELECT ENAME, SAL, SAL*12/365 FROM EMP;
+            OR
+  SELECT ENAME, SAL, SAL/30 FROM EMP;
+```
+10. WAWTD name, salary, annual salary and also annual bonus of Rs. 2000.
+```sql
+  SELECT ENAME, SAL, SAL*12, SAL*12+2000 FROM EMP;
+```
+
+
+
+
+
+
 
 
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
