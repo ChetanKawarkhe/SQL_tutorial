@@ -483,11 +483,118 @@ or
 ```sql
   SELECT ENAME, SAL, SAL*12, SAL*12+2000 FROM EMP;
 ```
+11. WAQTD name, commision and als increase of commission in 10%.
+```sql
+  SELECT ENAME, COMM, COMM+COMM*10/100 FROM EMP;
+```
+12. WAQTD name, sal and also monthly bonus of 1500.
+```sql
+  SELECT NAME, SAL, SAL+1500 FROM EMP;
+```
+---
+
+##  ALIAS
+  - Alias is an alternative name given for a particular column .
+  - Alias can be used by the keyword called 'As'
+  - Alias can be enclose dwithin double quotes ("  ") & seperated by underscore(_).
+  ##### Note:-  by calling ALIAS name the origional name will not change.
 
 
-
-
-
+### QUESTIONS
+1.  WAQTD name of employees with ALIAS.
+```sql
+  SELECT ENAME WORKER, FROM EMP;
+```
+2.   WAQTD NAME, SAL AND (annual salary) SAL*12 with ALIAS.
+```sql
+SELECT ENAME WORKER, SAL SALARY, SAL*12 ANNUAL_SALARY FROM EMP;
+                OR
+SELECT ENAME KARAMCHARI, SAL TANAKHA, SAL*12 SALANA_TANAKHA FROM EMP;
+```
+3. WAQTD NAME, SALARY & also ANNUAL SALARY with ALIAS NAME.
+```sql
+  SELECT ENAME, SAL,SAL*12 "ANNUAL_SALARY" FROM EMP;
+              OR
+SELECT ENAME, SAL,SAL*12 "ANNUAL SALARY" FROM EMP;
+              OR
+SELECT ENAME, SAL,SAL*12 "ANNUALSALARY" FROM EMP;
+              OR
+SELECT ENAME, SAL,SAL*12 "ANNUAL_SALARY" FROM EMP;
+              OR
+SELECT ENAME, SAL,SAL*12 ANNUAL_SALARY FROM EMP;
+              OR
+SELECT ENAME, SAL,SAL*12 ANNUALSALARY FROM EMP;
+```
+---
+##  ASSIGNEMENT EXPRESSIONS AND ALIAS
+1.  WAQTD name of the employee along with their annual salary.
+```sql
+  SELECT ENAME, SAL*12, FROM EMP;
+```
+2. WAQTD name & job for all the emploees with their half term salary.
+```sql
+  SELECT ENAME, JOB, SAL*6 FROM EMP;
+```
+3.  WAQTD all the details of the employees along with an annual bonus of 2000
+```sql
+  SELECT EMP.*, SAL*12+2000 FROM EMP;
+```
+4.  WAQTD name, salary, salary with hike of 10%.
+```sql
+  SELECT ENMAE, SAL, SAL+SAL*10/100 FROM EMP;
+```
+5.  WAQTD name and salary with deduction of 25%.
+```sql
+  SELECT ENAME, SAL, SAL-SAL*10/100 FORM EMP;
+```
+6.  WAQTD name and salary with monthly hike of 50.
+```sql
+  SELECT ENAME, SAL+50 FORM EMP;
+```
+7.  WAQTD name and annual salary with deduction of 10%.
+```sql
+  SELECT ENAME, SAL*12-SAL*10/100 FROM EMP;
+```
+8.  WAQTD total salary given to each employee (sal+comm).  <br/><br/>
+```WITHOUT ENAME:```
+```sql
+  SELECT SAL+COMM FROM EMP;
+```
+```WITH ENAME:```
+```sql
+  SELECT  ENAME, SAL+COMM FROM EMP;
+```
+9.  WAQTD details of all the employees along with annual salary.
+```sql
+  SELECT EMP.*,SAL*12 FROM EMP;
+```
+10. WAQTD details and designation along with 100 penalty in salary.
+```sql
+  SELECT ENAME, JOB, SAL-100 FORM EMP;
+```
+---
+# **11/02/2023**
+##  Selection
+- The Retreiveal of the data by selecting both columns and records.
+- syntax
+    ```
+      EXPRESSION/[ALIAS]
+      FORM TABLE_NAME
+      WHERE<FILTER_CONDITION>
+    ```
+##  ORDER OF EXECUTION  
+    1.  FROM CLAUSE
+    2.  WHERE CLAUSE
+    3.  SELECT CLAUSE
+### WHERE CLAUSE
+  - WHERE CLAUSE is used to filter the records.
+  - WHERE CLAUSE will execute row by row.
+  - WHERE CLAUSE will execute after the execution of FROM CLAUSE.
+  - In WHERE CLAUSE we can pass filter condition.
+  - In WHERE CLAUSE we can pass multiple arguments by using logical operators.
+  
+### EXAMPLE:
+  ![](./img/26.jpg)
 
 
 
